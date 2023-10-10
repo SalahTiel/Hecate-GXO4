@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.jpg" />
+    <title>Hecate GX04</title>
+  </head>
+
+  <body>
+    <!--OPENING ANIMATION-->
+    <div class="openingScreen">
+      <div class="openingScreen-logos">
+        <img src="/assets/EDIFIER-logo.png" alt="" />
+        <div class="bar">
+          <div class="bar-line"></div>
+          <div class="bar-line"></div>
+          <div class="bar-line"></div>
+        </div>
+        <img src="/assets/HECATE-logo.png" alt="" />
+      </div>
+    </div>
+
+    <!--HEADER-->
+    <header>
+      <img id="logos" src="assets/logo group-header.png" alt="" />
+      <nav class="navigation">
+        <ul>
+          <li><a href="">home</a></li>
+          <li><a href="">about</a></li>
+          <li><a href="">details</a></li>
+          <li><a href="">meet more</a></li>
+        </ul>
+        <button class="orderNow-button">order now</button>
+      </nav>
+
+      <img
+        onclick="openAndClose('open')"
+        id="menuIcon"
+        src="assets/hamburguer.png"
+        alt=""
+      />
+    </header>
+
+    <!--MOBILE MENU-->
+    <div id="menu">
+      <img
+        onclick="openAndClose('close')"
+        id="closeIcon"
+        src="assets/closeMenu.png"
+        alt=""
+      />
+      <nav class="navigation">
+        <ul>
+          <li><a href="" class="">home</a></li>
+          <li><a href="" class="">about</a></li>
+          <li><a href="" class="">details</a></li>
+          <li><a href="" class="">meetmore</a></li>
+        </ul>
+      </nav>
+      <button class="orderNow-button">order now</button>
+      <img id="logos" src="assets/logo group-header.png" alt="" />
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
