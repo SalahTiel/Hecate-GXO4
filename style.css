@@ -15,7 +15,7 @@
 }
 
 body{
-  overflow: hidden;
+  overflow-x: hidden;
   background: radial-gradient(circle at 80% 55%, var(--gradient)-10%, var(--gradient-second) 40%);
   background-color: var(--background)
 }
@@ -166,11 +166,12 @@ header #menuIcon {
 
 
 /*HOME*/
-main {
-  margin-inline: 6rem;
+.container{
+  margin-inline: 6rem
 }
 
 .home {
+  height: 90vh;
   display: flex;
   justify-content: space-between;
   padding-block: 4rem
@@ -184,14 +185,66 @@ main {
   height: 415px;
 }
 
+/*ABOUT*/
+.about{
+  display: flex;
+  box-shadow: 0px 0px 50px 5px var(--background);
+  background-color: var(--background-second);
+  position: relative;
+}
+.about img{
+  width: 40vw;
+  display: none;
+}
+.about img.visible{
+  display: block;
+}
+.carousel{
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+.carousel input{
+  display: none;
+}
+.carousel label{
+  width: 20px;
+  height: 40px;
+  background-color: red;
+}
+.carousel input:checked + label{
+  background-color: blue;
+}
+.carousel-images{
+  width: 40vw;
+  height: 60vh;
+  background-image: url(assets/slider-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 0px 15px 15px 0px;
+  transition: all 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
-
-
-
+.about .text{
+  width: 60vw;
+  padding: 2rem;
+}
+.text h3{
+  color: var(--primary);
+}
 
 /*RESPONSIVE*/
 @media screen and (max-width: 375px) {
-
+  html body{
+    background: radial-gradient(circle at 50% 25%, var(--gradient), var(--gradient-second) 30%);
+    background-color: var(--background);
+  }
   header .navigation,
   header #logos {
     display: none;
@@ -206,11 +259,12 @@ main {
     display: none;
   }
   section.home{
-    gap: 3rem;
-    padding-block: 0;
+    height: 90vh;
+    padding: 0 0 4rem 0;
+    justify-content: center;
   }
   .home img#title{
-    width: 200px;
+    width: 250px;
     height: auto;
   }
   .home img#home-image{
@@ -221,7 +275,7 @@ main {
 
 @media screen and (max-width: 768px) {
   body{
-    background: radial-gradient(circle, var(--gradient), var(--gradient-second) 60%);
+    background: radial-gradient(circle at 50% 30%, var(--gradient), var(--gradient-second) 40%);
     background-color: var(--background);
   }
   header {
@@ -236,8 +290,8 @@ main {
   header .navigation ul {
     gap: 1rem;
   }
-  main {
-    margin-inline: 2rem;
+  .container{
+    margin-inline: 2rem
   }
   .home{
     height: 100%;

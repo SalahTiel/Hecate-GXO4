@@ -16,7 +16,7 @@
 
   <body>
     <!--OPENING ANIMATION-->
-    <div class="openingScreen">
+    <div id="openingScreen" class="openingScreen">
       <div class="openingScreen-logos">
         <img src="/assets/EDIFIER-logo.png" alt="" />
         <div class="bar">
@@ -68,12 +68,30 @@
       <img id="logos" src="assets/logo group-header.png" alt="" />
     </div>
 
-    <main>
-      <section class="home">
-        <img id="title" src="assets/TITLE.svg" />
-        <img id="home-image" class="image" src="assets/gx04-6.png" alt="" />
-      </section>
-    </main>
+    <section class="home container">
+      <img id="title" src="assets/TITLE.svg" />
+      <img id="home-image" class="image" src="assets/gx04-6.png" alt="" />
+    </section>
+
+    <section class="about">
+      <div class="carousel">
+        <input id="radio-1" type="radio" name="carousel" checked />
+        <label onclick="carousel(0)" for="radio-1"></label>
+        <input id="radio-2" type="radio" name="carousel" />
+        <label onclick="carousel(1)" for="radio-2"></label>
+        <input id="radio-3" type="radio" name="carousel" />
+        <label onclick="carousel(2)" for="radio-3"></label>
+      </div>
+      <div class="carousel-images"></div>
+
+      <div class="text">
+        <h3>EDIFIER TWS GAMING HEADPHONE</h3>
+        <p>
+          Gx04 Hecate is the perfect wireless headset for gamers. With low
+          latency, it provides an immersive and lag-free gaming experience.
+        </p>
+      </div>
+    </section>
   </body>
   <script src="script.js"></script>
 </html>
